@@ -1,0 +1,25 @@
+#1. Importing the Dataset and extracting basic information using .head(), .describe(), .info() and .value_counts()
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np 
+import seaborn as sns
+
+data = pd.read_csv('Downloads/train.csv')
+data.head()
+data.describe()
+data.info()
+data.value_counts()
+
+#2. Making the Heatmap for missing values 
+data = pd.read_csv('Downloads/train.csv')
+sns.set_theme()
+plt.figure(figsize=(10,5))
+sns.heatmap(data.isna(), cbar=False)
+plt.title('Missing Values heatmap')
+
+#3. Making a Density Plot for Age and Fare columns 
+num_cols = ['Age', 'Fare']
+for col in num_cols:
+    sns.histplot(data[col], kde=True)
+    plt.title(f"Distribution of {col}")
+    plt.show()
