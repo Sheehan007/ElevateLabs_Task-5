@@ -38,7 +38,7 @@ Observation: Cabin is mostly missing. Age and Embarked have modest gaps meaning 
 
 #3. Plotting a histplot 
 [Visulaisation added in files section under the name of "Distribution of Age" and "Distribution of Fare"]
-Observation: Fare is right skewed (becuase it has a long tail) and Age is roughly bell-shaped but slightly skewed to the right. 
+Observation: Fare is right skewed (because it has a long tail) and Age is roughly bell-shaped but slightly skewed to the right. 
 
 
 #4. Plotting a countplot, boxplot and violinplot for the respective categories given below: (survival v/s key features) 
