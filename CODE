@@ -23,3 +23,41 @@ for col in num_cols:
     sns.histplot(data[col], kde=True)
     plt.title(f"Distribution of {col}")
     plt.show()
+
+
+#4. Plotting a countplot, boxplot and violinplot for the respective categories given below: (survival v/s key features) 
+    a. Survival v/s Passenger Class 
+    b. Age v/s Survival 
+    c. Fare v/s Survival
+
+# Making a countplot  
+sns.countplot(data=data, x='Pclass', hue='Survived')
+plt.title('Survival by Passenger Class')
+plt.show()
+
+# Making a boxplot 
+sns.boxplot(data=data, x='Age', y='Survived')
+xticks = np.arange(0,100,10)
+plt.title('Age vs Survival')
+plt.show()
+
+# Making a violinplot
+sns.violinplot(data=data, x='Fare', y='Survived')
+plt.title('Fare vs Survival')
+plt.show()
+
+
+#5. Making a Correlation Matrix
+corr = data[['Survived','Pclass','Age','SibSp','Parch','Fare']].corr()
+sns.heatmap(corr, annot=True, fmt='.2f', cmap = 'coolwarm')
+plt.title('Feature Correlation Matrix')
+
+
+#6. Mkaing a Pairplot chart 
+sns.pairplot(
+    data[['Survived','Age','Fare','Pclass']], 
+    hue='Survived', 
+    corner=True, 
+    plot_kws = dict(alpha=0.5)
+)
+
