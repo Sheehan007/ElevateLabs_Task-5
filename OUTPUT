@@ -1,10 +1,10 @@
 #1. 
           PassengerId	Survived	Pclass	Name	                          Sex	    Age	  SibSp	   Parch	  Ticket	        Fare	  Cabin	Embarked
-0	            1	        0	       3	   Braund, Mr. Owen Harris	        male	  22.0	1	         0	     A/5 21171	  7.2500	NaN	S
-1	            2	        1	       1	   Cumings, Mrs. John Bradley       female	38.0	1	         0	     PC 17599	    71.2833	C85	C
-2	            3	        1	       3	   Heikkinen, Miss. Laina	          female	26.0	0	         0	     STON/O2.     3101282	7.9250	NaN	S
-3	            4	        1	       1	   Futrelle, Mrs. Jacques Heath     female	35.0	1	         0	     113803	      53.1000	C123	S
-4	            5	        0	       3	   Allen, Mr. William Henry	         male	  35.0	0	         0	     373450	       8.0500	NaN	S
+0	            1	        0	       3	   Braund, Mr. Owen Harris	       male   22.0	    1	         0     A/5 21171	  7.2500	NaN	S
+1	            2	        1	       1	   Cumings, Mrs. John Bradley        female 38.0	    1	         0     PC 17599	  71.2833	C85	C
+2	            3	        1	       3	   Heikkinen, Miss. Laina	       female 26.0	    0  	         0     STON/O2.     3101282	7.9250	NaN	S
+3	            4	        1	       1	   Futrelle, Mrs. Jacques Heath      female 35.0	    1	         0	     113803	      53.1000	C123	S
+4	            5	        0	       3	   Allen, Mr. William Henry	       male   35.0	    0	         0	     373450	       8.0500	NaN	S
 
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 891 entries, 0 to 890
@@ -37,20 +37,28 @@ Observation: Cabin is mostly missing. Age and Embarked have modest gaps meaning 
 
 
 #3. Plotting a histplot 
-[Visulaisation added in files section under the name of "Univariate Distributions-1" and "Univariate Distributions-2"]
+[Visulaisation added in files section under the name of "Distribution of Age" and "Distribution of Fare"]
 Observation: Fare is right skewed (becuase it has a long tail) and Age is roughly bell-shaped but slightly skewed to the right. 
 
 
-#4. Plotting a boxplot (survival v/s key features) 
+#4. Plotting a countplot, boxplot and violinplot for the respective categories given below: (survival v/s key features) 
     a. Survival v/s Passenger Class 
     b. Age v/s Survival 
     c. Fare v/s Survival
 Observation: 
 a. Pclass shows that First‑class passengers had far higher survival rates.
 b. Age shows that Median age of survivors is lower (children prioritized).
-c. Fare	shows that Survivors paid higher fares on average (proxy for class).
+c. Fare shows that Survivors paid higher fares on average (proxy for class).
 
 [Visulaisation added in files section under the name of "Survival vs Passenger Class", "Age vs Survival" and "Fare vs Survival"]
 
 
-#5. 
+#5. Making a Correlation Matrix
+[Visulaisation added in files section under the name of "Feature Correlation Matrix"]
+Observation: Pclass (negatively) and Fare (positively) correlate most with survival; multicollinearity looks mild.
+
+
+#6. Making a Pairplot Chart 
+[Visulaisation added in files section under the name of "Pairplot Chart"]
+Observations: First‑class status, higher fare, female gender (not shown above), and traveling with fewer siblings/spouses all correlate with higher survival probability. 
+Age shows a U‑shape (children and some elders prioritized). No severe multicollinearity detected among numeric predictors.
